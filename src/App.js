@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./component/Header";
+import DiaryList from "./component/DiaryList";
+import Day from "./component/Day";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App() {
+  // https://github.com/coding-angma/voca
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route exact path="/" element={<DiaryList/>}></Route>
+          <Route path="/day/:day" element={<Day/>}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
