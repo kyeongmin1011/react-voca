@@ -1,14 +1,8 @@
 import {Link} from "react-router-dom";
-import {useState, useEffect} from "react";
+import useFetch from "../hooks/useFetch";
 
 const DiaryList = () => {
-  const [days, setDays] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/days')
-      .then(res => res.json())
-      .then(data => setDays(data))
-  }, [])
+  const days = useFetch('http://localhost:3000/days')
 
   return (
     <ul className="list_day">
