@@ -1,10 +1,12 @@
 import {useNavigate, useParams} from "react-router-dom";
-import useFetch from "../hooks/useFetch";
-import Word from "./Word";
+// @ts-ignore
+import useFetch from "../hooks/useFetch.ts";
+// @ts-ignore
+import Word, {IWord} from "./Word.tsx";
 
 const Day = () => {
-  const {day} = useParams();
-  const words = useFetch(`http://localhost:3000/words?day=${day}`);
+  const {day} = useParams<{day: string}>();
+  const words: IWord[] = useFetch(`http://localhost:3000/words?day=${day}`);
   const navigate = useNavigate();
 
   const dayDelete = () => {
