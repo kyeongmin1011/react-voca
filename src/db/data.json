@@ -23,14 +23,14 @@
       "day": 1,
       "eng": "book",
       "kor": "책",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 2,
       "day": 1,
       "eng": "car",
       "kor": "자동차",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 3,

@@ -6,7 +6,13 @@
 - `import { BrowserRouter, Route, Routes } from "react-router-dom"`
 - 여러 라우팅을 매칭하고 싶은 경우 URL 뒤에 `*` 을 사용
 - `<Route path="/page1/*" element={<Page1 />} />`
-- 
+
+
+## #11 json-server, REST API
+- `npm install -g json-server`
+- `json-server --watch ./src/db/data.json --port3001`
+
+
 
 ### 참고
 route : [https://velog.io/@soryeongk/ReactRouterDomV6](https://velog.io/@soryeongk/ReactRouterDomV6)
