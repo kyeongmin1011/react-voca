@@ -13,6 +13,9 @@
 - `json-server --watch ./src/db/data.json --port3001`
 
 
+## #12 useEffect, fetch()
+- `http://localhost:3000/words?day=1` day가 1인 데이터만 출력됨
+
 
 ### 참고
 route : [https://velog.io/@soryeongk/ReactRouterDomV6](https://velog.io/@soryeongk/ReactRouterDomV6)
