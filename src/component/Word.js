@@ -1,11 +1,47 @@
 import {useState} from "react";
 
-const Word = ({ word }) => {
+const Word = ( props ) => {
+  const [word, setWord] = useState(props.word)
   const [isShow, setIsShow] = useState(false);
   const [isDone, setIsDone] = useState(word.isDone);
 
   const toggleShow = () => setIsShow(!isShow);
-  const toggleDone = () => setIsDone(!isDone);
+  const toggleDone = () => {
+    fetch(`http://localhost:3000/words/${word.id}`, {
+      method: 'PUT',
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      // PUT 은 수정을 위한 데이터라서 body에 담아주기
+      body: JSON.stringify({
+        ...word,
+        isDone: !isDone,
+      })
+    })
+      .then(res => {
+        if (res.ok) {
+          setIsDone(!isDone);
+        }
+      });
+  }
+
+  const remove = () => {
+    if (window.confirm('삭제하시겠습니까?')) {
+      fetch(`http://localhost:3000/words/${word.id}`, {
+        method: 'DELETE'
+      })
+        .then(res => {
+          if (res.ok) {
+            setWord({id: 0})
+          }
+        })
+    }
+  }
+
+  if (word.id === 0) {
+    return null;
+  }
+
 
   return (
     <tbody className="Word">
@@ -15,7 +51,7 @@ const Word = ({ word }) => {
       <td>{isShow && word.kor}</td>
       <td>
         <button onClick={toggleShow}>{isShow ? '숨기기' : '뜻 보기'}</button>
-        <button className="btn_del">삭제</button>
+        <button onClick={remove} className="btn_del">삭제</button>
       </td>
     </tr>
     </tbody>
