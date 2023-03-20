@@ -16,6 +16,19 @@
 ## #12 useEffect, fetch()
 - `http://localhost:3000/words?day=1` day가 1인 데이터만 출력됨
 
+## #13 Custom Hooks
+- ` 'Custom Hook를 만든다 = 재사용 가능한 함수를 만든다'`
+- 하지만, 일반 컴포넌트에서는 리액트에게 전달해줄 UI 즉, JSX를 return하는 반면에 Custom Hooks은 외부 컴포넌트들과 공유하고 싶은 데이터를 return하면 된다.
+
+## #14 PUT(수정), DELETE(삭제)
+- 체크박스 true, false 값 수정해서 저장하기
+- PUT 수정할 때, `body`값은 `JSON.stringify` 문자열로 바꿔주기!
+- DELETE 삭제할 땐, `body`값 없어도 된다.
+
+## #15 POST(생성), useNavigate(페이지이동)
+
+
+
 
 ### 참고
 route : [https://velog.io/@soryeongk/ReactRouterDomV6](https://velog.io/@soryeongk/ReactRouterDomV6)

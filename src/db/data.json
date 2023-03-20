@@ -13,12 +13,8 @@
       "day": 3
     },
     {
-      "id": 4,
-      "day": 4
-    },
-    {
-      "day": 5,
-      "id": 5
+      "day": 4,
+      "id": 4
     }
   ],
   "words": [
@@ -91,20 +87,6 @@
       "eng": "apple",
       "kor": "사과",
       "isDone": false
-    },
-    {
-      "eng": "banana",
-      "kor": "바나나",
-      "day": "4",
-      "isDone": false,
-      "id": 12
-    },
-    {
-      "eng": "tree",
-      "kor": "나무",
-      "day": "5",
-      "isDone": false,
-      "id": 13
     }
   ]
 }
