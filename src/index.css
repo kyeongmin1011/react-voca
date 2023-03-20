@@ -67,7 +67,7 @@ a {
   color: #fff;
   text-align: center;
   border-radius: 10px;
-  background-color: dodgerblue;
+  background-color: black;
 }
 
 table {
@@ -105,7 +105,7 @@ button {
   border-radius: 6px;
   padding: 10px 20px;
   color: #fff;
-  background-color: dodgerblue;
+  background-color: cornflowerblue;
 }
 
 .input_area {
